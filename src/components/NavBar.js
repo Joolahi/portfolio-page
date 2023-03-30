@@ -19,7 +19,7 @@ const NavBar = () => {
             name: "Projects",
         },
         {
-            path: "/",
+            path: "/Contact.js",
             name: "Contact",
         },
         {
@@ -59,7 +59,7 @@ const NavBar = () => {
                     <Nav className="ms-auto">
                         {
                             menu.map((item) => (
-                                <Nav.Link href={item.path} key={item.name} className="linksNav">
+                                <Nav.Link to={item.path} key={item.name} className="linksNav">
                                     <div className="list_items">{item.name}</div>
 
                                 </Nav.Link>
