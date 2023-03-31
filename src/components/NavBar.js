@@ -8,6 +8,7 @@ import { faFacebook, faInstagram, faLinkedin, faGithub } from '@fortawesome/free
 
 
 
+
 const NavBar = () => {
     const menu = [
         {
@@ -19,7 +20,7 @@ const NavBar = () => {
             name: "Projects",
         },
         {
-            path: "/Contact.js",
+            path: "/contact",
             name: "Contact",
         },
         {
@@ -53,13 +54,17 @@ const NavBar = () => {
             className="navbar"
         >
             <Container>
-                <Navbar.Brand href="#home" className="navbar-brand">Home</Navbar.Brand>
+                <Navbar.Brand href="#home" className="navbar-brand">
+                    <img src={require("../img/JoLA.png")}
+                        className="logo"
+                        alt="Logo" />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         {
                             menu.map((item) => (
-                                <Nav.Link to={item.path} key={item.name} className="linksNav">
+                                <Nav.Link href={item.path} key={item.name} className="linksNav">
                                     <div className="list_items">{item.name}</div>
 
                                 </Nav.Link>
